@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML to Webflow</title>
+    <link rel="stylesheet" href="converter.css">
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <div class="header-left">
+                <h1>HTML → WEBFLOW</h1>
+                <a class="page-link" href="reverse.html">Need the reverse? Webflow → HTML →</a>
+            </div>
+            <div class="tabs">
+                <button data-tab="html" class="active">HTML</button>
+                <button data-tab="css">CSS</button>
+                <button data-tab="js">JS</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="editor">
+                <div class="code-wrap">
+                    <textarea id="input-html" class="code-input active" spellcheck="false"
+                        placeholder='<div class="card">&#10;  <h2 class="title">Hello</h2>&#10;  <p class="desc">Paste your HTML here...</p>&#10;</div>'></textarea>
+                    <textarea id="input-css" class="code-input" spellcheck="false"
+                        placeholder='.card {&#10;  padding: 32px;&#10;  background: #e0f2fe;&#10;  border-radius: 16px;&#10;}&#10;&#10;.card:hover {&#10;  background: #bae6fd;&#10;}'></textarea>
+                    <textarea id="input-js" class="code-input" spellcheck="false"
+                        placeholder='document.querySelectorAll(".card").forEach(card => {&#10;  card.addEventListener("click", () => console.log("clicked"));&#10;});'></textarea>
+                </div>
+                <button id="btn-convert">→ Convert to Webflow</button>
+            </section>
+
+            <aside class="sidebar">
+                <h3>HOW IT WORKS</h3>
+                <p>Converts HTML + CSS into Webflow elements. Click convert, then paste
+                    (Cmd/Ctrl+V) on the Webflow canvas. Full HTML documents are accepted —
+                    DOCTYPE/html/head are skipped, <code>&lt;body&gt;</code> becomes the
+                    wrapper div. JS is embedded as a Code Embed, <code>:hover</code>
+                    becomes a Webflow hover variant.</p>
+
+                <div class="actions">
+                    <button id="btn-copy">⧉ Copy JSON</button>
+                    <button id="btn-clear">⌫ Clear All</button>
+                </div>
+
+                <div class="status" id="status"></div>
+
+                <div class="output-label">PREVIEW JSON</div>
+                <pre id="output"></pre>
+            </aside>
+        </main>
+    </div>
+
+    <script src="converter.js"></script>
+</body>
+
+</html>

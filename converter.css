@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0a0d;
+    color: #e5e5e5;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 28px;
+    border-bottom: 1px solid #1f1f24;
+    flex-shrink: 0;
+}
+
+header h1 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #d4d4d8;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.page-link {
+    font-size: 11px;
+    color: #71717a;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.15s;
+}
+
+.page-link:hover {
+    color: #6d28d9;
+}
+
+.tabs {
+    display: flex;
+    gap: 2px;
+    background: #18181b;
+    padding: 4px;
+    border-radius: 8px;
+    border: 1px solid #27272a;
+}
+
+.tabs button {
+    background: transparent;
+    border: none;
+    color: #71717a;
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 0.08em;
+    transition: all 0.15s;
+}
+
+.tabs button:hover {
+    color: #d4d4d8;
+}
+
+.tabs button.active {
+    background: #6d28d9;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 28px;
+    min-width: 0;
+}
+
+.code-wrap {
+    flex: 1;
+    min-height: 0;
+    position: relative;
+}
+
+.code-input {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+    border: none;
+    color: #e5e5e5;
+    font-family: 'SF Mono', Menlo, Monaco, 'Cascadia Code', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    resize: none;
+    outline: none;
+    display: none;
+    white-space: pre;
+    overflow: auto;
+    tab-size: 2;
+    padding: 4px;
+}
+
+.code-input.active {
+    display: block;
+}
+
+.code-input::placeholder {
+    color: #3f3f46;
+}
+
+#btn-convert,
+#btn-reverse {
+    margin-top: 18px;
+    background: #18181b;
+    border: 1px solid #27272a;
+    color: #fafafa;
+    padding: 18px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+#btn-convert:hover,
+#btn-reverse:hover {
+    background: #27272a;
+    border-color: #3f3f46;
+}
+
+#btn-convert:active,
+#btn-reverse:active {
+    transform: scale(0.99);
+}
+
+.sidebar {
+    width: 300px;
+    border-left: 1px solid #1f1f24;
+    padding: 24px 28px;
+    overflow-y: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h3 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #d4d4d8;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sidebar h3::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #6d28d9;
+}
+
+.sidebar p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #a1a1aa;
+    margin-bottom: 22px;
+}
+
+.sidebar p code {
+    background: #18181b;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 11px;
+    color: #d4d4d8;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.actions button {
+    flex: 1;
+    background: #18181b;
+    border: 1px solid #27272a;
+    color: #e5e5e5;
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.actions button:hover {
+    background: #27272a;
+}
+
+.status {
+    font-size: 11px;
+    color: #6d28d9;
+    margin-bottom: 12px;
+    min-height: 16px;
+    font-weight: 500;
+}
+
+.status.error {
+    color: #ef4444;
+}
+
+.output-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #52525b;
+    margin-bottom: 8px;
+}
+
+#output,
+#output-html,
+#output-css {
+    background: #0d0d10;
+    border: 1px solid #1f1f24;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: 'SF Mono', Menlo, Monaco, monospace;
+    font-size: 10px;
+    color: #71717a;
+    overflow: auto;
+    white-space: pre;
+    line-height: 1.5;
+    max-height: 240px;
+}
+
+#output {
+    flex: 1;
+    min-height: 120px;
+    max-height: none;
+}
+
+#output:empty::before,
+#output-html:empty::before,
+#output-css:empty::before {
+    content: "Output will appear here after convert...";
+    color: #3f3f46;
+    font-style: italic;
+}

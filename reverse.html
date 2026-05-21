@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Webflow to HTML</title>
+    <link rel="stylesheet" href="converter.css">
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <div class="header-left">
+                <h1>WEBFLOW → HTML</h1>
+                <a class="page-link" href="converter.html">← Need the forward? HTML → Webflow</a>
+            </div>
+            <div class="tabs">
+                <button class="active">JSON</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="editor">
+                <div class="code-wrap">
+                    <textarea id="input-json" class="code-input active" spellcheck="false"
+                        placeholder='{"type":"@webflow/XscpData","payload":{"nodes":[...],"styles":[...]},...}'></textarea>
+                </div>
+                <button id="btn-reverse">← Convert to HTML + CSS</button>
+            </section>
+
+            <aside class="sidebar">
+                <h3>HOW IT WORKS</h3>
+                <p>Paste a Webflow <code>@webflow/XscpData</code> JSON payload and convert
+                    it back to vanilla HTML + CSS fragment. Combo classes, hover and
+                    breakpoint variants, plus global <code>&lt;style&gt;</code> embeds are
+                    restored. Script embeds are skipped.</p>
+
+                <div class="actions">
+                    <button id="btn-copy-html">⧉ Copy HTML</button>
+                    <button id="btn-copy-css">⧉ Copy CSS</button>
+                    <button id="btn-clear-reverse">⌫ Clear</button>
+                </div>
+
+                <div class="status" id="status"></div>
+
+                <div class="output-label">HTML</div>
+                <pre id="output-html"></pre>
+                <div class="output-label" style="margin-top: 14px">CSS</div>
+                <pre id="output-css"></pre>
+            </aside>
+        </main>
+    </div>
+
+    <script src="reverse.js"></script>
+</body>
+
+</html>

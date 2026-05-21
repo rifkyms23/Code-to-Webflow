@@ -1,0 +1,59 @@
+{
+  "type": "@webflow/XscpData",
+  "payload": {
+    "nodes": [
+      {
+        "_id": "57b74706-5253-3e1c-4920-876f659551a0",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["c5be3cf7-2847-0586-ebdc-1cdb07159b8c"],
+        "children": [],
+        "data": {
+          "tag": "div",
+          "text": false,
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "displayName": "",
+          "attr": { "id": "" },
+          "xattr": [{ "name": "data-category", "value": "tech" }],
+          "search": { "exclude": false },
+          "visibility": {
+            "conditions": [],
+            "keepInHtml": { "tag": "False", "val": {} }
+          }
+        }
+      }
+    ],
+    "styles": [
+      {
+        "_id": "c5be3cf7-2847-0586-ebdc-1cdb07159b8c",
+        "fake": false,
+        "type": "class",
+        "name": "course-card",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "background: @raw<|var(--color-surface)|>; border: 0.0625rem solid @raw<|var(--color-border)|>; border-radius: @raw<|var(--radius-lg)|>; padding: 2rem; position: relative; transition: transform @raw<|var(--transition)|>, border-color @raw<|var(--transition)|>, box-shadow @raw<|var(--transition)|>; overflow: hidden;",
+        "variants": {
+          "main_hover": {
+            "styleLess": "transform: translate(0px, -0.375rem); border-color: @raw<|var(--color-accent)|>; box-shadow: @raw<|var(--shadow-accent)|>;"
+          }
+        },
+        "children": [],
+        "origin": null,
+        "selector": null
+      }
+    ],
+    "assets": [],
+    "ix1": [],
+    "ix2": { "interactions": [], "events": [], "actionLists": [] }
+  },
+  "meta": {
+    "droppedLinks": 0,
+    "dynBindRemovedCount": 0,
+    "dynListBindRemovedCount": 0,
+    "paginationRemovedCount": 0,
+    "universalBindingsRemovedCount": 0,
+    "unlinkedSymbolCount": 0,
+    "codeComponentsRemovedCount": 0,
+    "richTextComponentsStripped": false
+  }
+}

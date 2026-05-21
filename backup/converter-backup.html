@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML to Webflow Converter</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 40px;
+            background: #f0f0f0;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* 1. INI ADALAH CSS BIASA KITA */
+        .custom-title {
+            padding-top: 32px;
+            padding-right: 32px;
+            padding-bottom: 32px;
+            padding-left: 32px;
+            background-color: #e0f2fe;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            text-align: center;
+        }
+
+        .judul-saya {
+            color: #0369a1;
+            font-size: 24px;
+            margin-bottom: 12px;
+            margin-top: 0px;
+        }
+
+        .deskripsi-saya {
+            color: #0c4a6e;
+            font-size: 16px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        /* Styling untuk tampilan alat ini saja (tidak ikut ke Webflow) */
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #38bdf8;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-y: auto;
+            height: 300px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>1. HTML & CSS Asli Anda</h2>
+        <p>Ini adalah elemen <code>div</code> standar yang dibuat menggunakan Vanilla HTML & CSS. Coba klik kanan lalu
+            Inspect.</p>
+
+        <!-- 2. INI ADALAH TARGET HTML KITA -->
+        <div id="target-elemen" class="custom-title">
+            <h2 class="judul-saya">Halo dari HTML Murni!</h2>
+            <p class="deskripsi-saya">Ini aslinya cuma HTML biasa. Script di bawah akan merayapi DOM elemen ini dan
+                menerjemahkannya jadi Webflow JSON saat tombol diklik.</p>
+        </div>
+
+        <button id="btn-convert">Terjemahkan & Copy ke Webflow</button>
+
+        <h2>2. Hasil Terjemahan JSON</h2>
+        <pre id="output">Teks JSON akan muncul di sini setelah diterjemahkan...</pre>
+    </div>
+
+    <script>
+        // --- BAGIAN 1: FUNGSI PEMBANTU ---
+        // Fungsi membuat ID acak (UUID) untuk komponen Webflow
+        function generateId() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+
+        // Simulasi "CSS Parser" (Mengekstrak file CSS asli menjadi format string Webflow). 
+        // *Catatan: Di dunia nyata, membuat parser CSS dinamis ini sangatlah sulit dan panjang.
+        const simulasiCSS = {
+            'kartu-saya': 'padding-top: 32px; padding-right: 32px; padding-bottom: 32px; padding-left: 32px; background-color: #e0f2fe; border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; text-align: center;',
+            'judul-saya': 'color: #0369a1; font-size: 24px; margin-bottom: 12px; margin-top: 0px;',
+            'deskripsi-saya': 'color: #0c4a6e; font-size: 16px; margin-bottom: 0px; margin-top: 0px;'
+        };
+
+        // --- BAGIAN 2: FUNGSI PENERJEMAH UTAMA (HTML TO JSON) ---
+        function htmlToWebflowJson(rootElem) {
+            const nodes = [];
+            const styles = [];
+            const classIdMap = {};
+
+            // Merayapi (traverse) HTML secara rekursif dari induk ke anak
+            function processElement(el) {
+                const nodeId = generateId();
+                const tag = el.tagName.toLowerCase();
+
+                // Memetakan Tag HTML ke Tipe Webflow
+                let wfType = "Block";
+                if (['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(tag)) wfType = "Heading";
+                if (tag === 'p') wfType = "Paragraph";
+
+                const nodeObj = {
+                    _id: nodeId,
+                    type: wfType,
+                    tag: tag,
+                    classes: [],
+                    children: [],
+                    data: { tag: tag }
+                };
+                nodes.push(nodeObj);
+
+                // A. Proses Class (Ubah class HTML jadi ID Style Webflow)
+                for (let className of el.classList) {
+                    if (!classIdMap[className]) {
+                        const styleId = generateId();
+                        classIdMap[className] = styleId; // Simpan pemetaan nama -> id
+                        styles.push({
+                            _id: styleId,
+                            type: "class",
+                            name: className,
+                            styleLess: simulasiCSS[className] || "", // Ambil CSS dari peta kita
+                            variants: {},
+                            children: [],
+                            fake: false
+                        });
+                    }
+                    nodeObj.classes.push(classIdMap[className]);
+                }
+
+                // B. Proses Anak Elemen (Cek HTML di dalamnya)
+                let hasElementChildren = false;
+                for (let child of el.childNodes) {
+                    if (child.nodeType === Node.ELEMENT_NODE) {
+                        hasElementChildren = true;
+                        const childId = processElement(child);
+                        nodeObj.children.push(childId); // Hubungkan anak ke induk
+                    }
+                }
+
+                // C. Proses Teks (Ubah innerHTML biasa jadi TextNode spesifik Webflow)
+                if (!hasElementChildren && el.textContent.trim()) {
+                    const textNodeId = generateId();
+                    nodeObj.children.push(textNodeId);
+                    nodes.push({
+                        _id: textNodeId,
+                        text: true,
+                        v: el.textContent.trim()
+                    });
+                }
+
+                return nodeId;
+            }
+
+            // Mulai penerjemahan dari elemen terluar
+            processElement(rootElem);
+
+            // Satukan semuanya menjadi Payload Resmi Webflow
+            return {
+                type: "@webflow/XscpData",
+                payload: {
+                    nodes: nodes,
+                    styles: styles,
+                    assets: [],
+                    ix1: [],
+                    ix2: { interactions: [], events: [], actionLists: [] }
+                },
+                meta: { unlinkedSymbolCount: 0, droppedLinks: 0, dynBindRemovedCount: 0, dynListBindRemovedCount: 0, paginationRemovedCount: 0 }
+            };
+        }
+
+        // --- BAGIAN 3: EKSEKUSI SAAT TOMBOL DIKLIK ---
+        document.getElementById('btn-convert').addEventListener('click', function () {
+            const targetEl = document.getElementById('target-elemen');
+
+            // 1. Jalankan proses "Translate"
+            const webflowData = htmlToWebflowJson(targetEl);
+            const jsonString = JSON.stringify(webflowData, null, 2);
+
+            // 2. Tampilkan outputnya agar bisa dilihat mata
+            document.getElementById('output').textContent = jsonString;
+
+            // 3. Trik Hack Clipboard (agar browser mau menerima tipe application/json)
+            const handler = function (ev) {
+                ev.clipboardData.setData('application/json', jsonString);
+                ev.preventDefault();
+            };
+
+            document.addEventListener('copy', handler);
+            const sukses = document.execCommand('copy');
+            document.removeEventListener('copy', handler);
+
+            if (sukses) {
+                alert("Ajaib! HTML berhasil di-convert ke format Webflow JSON & di-copy ke Clipboard Anda.\n\nSekarang buka tab Webflow Anda dan tekan Ctrl+V.");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+{
+    "type": "@webflow/XscpData",
+    "payload": {
+        "nodes": [
+            {
+                "_id": "2e9576c5-3316-bafe-7b84-8d160e144d9b",
+                "type": "Link",
+                "tag": "a",
+                "classes": [
+                    "1fc96acd-782a-6850-b73a-7d44f2e633a3"
+                ],
+                "children": [
+                    "9f0c8191-ad64-c012-3b55-2f09dc1ec299",
+                    "6e67ff19-428a-84ba-ce2c-2a3f2bdbc2de"
+                ],
+                "data": {
+                    "button": false,
+                    "block": "inline",
+                    "link": {
+                        "mode": "external",
+                        "url": "#"
+                    },
+                    "eventIds": [],
+                    "attr": {
+                        "id": ""
+                    },
+                    "devlink": {
+                        "runtimeProps": {},
+                        "slot": ""
+                    },
+                    "displayName": "",
+                    "xattr": [],
+                    "search": {
+                        "exclude": false
+                    },
+                    "visibility": {
+                        "conditions": []
+                    }
+                }
+            },
+            {
+                "_id": "9f0c8191-ad64-c012-3b55-2f09dc1ec299",
+                "type": "Block",
+                "tag": "div",
+                "classes": [
+                    "e1a6bf42-0c15-0c85-fd37-20d0df4bcadb"
+                ],
+                "children": [
+                    "084ee5a6-801c-91ff-114a-da08068689e3",
+                    "7c5fe19f-05b0-f8dc-2317-964a7f916fbb"
+                ],
+                "data": {
+                    "text": false,
+                    "tag": "div",
+                    "devlink": {
+                        "runtimeProps": {},
+                        "slot": ""
+                    },
+                    "displayName": "",
+                    "attr": {
+                        "id": ""
+                    },
+                    "xattr": [],
+                    "search": {
+                        "exclude": false
+                    },
+                    "visibility": {
+                        "conditions": []
+                    }
+                }
+            },
+            {
+                "_id": "084ee5a6-801c-91ff-114a-da08068689e3",
+                "type": "DOM",
+                "tag": "div",
+                "classes": [
+                    "ec87ccaf-f16a-06cd-522a-ca314b2ed87d"
+                ],
+                "children": [
+                    "8cefa1c1-ff1a-b5b8-5e31-7835af223f2f"
+                ],
+                "data": {
+                    "tag": "span",
+                    "attributes": []
+                }
+            },
+            {
+                "_id": "8cefa1c1-ff1a-b5b8-5e31-7835af223f2f",
+                "text": true,
+                "v": "Slanted Button"
+            },
+            {
+                "_id": "7c5fe19f-05b0-f8dc-2317-964a7f916fbb",
+                "type": "DOM",
+                "tag": "div",
+                "classes": [
+                    "ec87ccaf-f16a-06cd-522a-ca314b2ed87d"
+                ],
+                "children": [
+                    "9cfd906b-a286-a7e6-ce7d-38d80e45fae7"
+                ],
+                "data": {
+                    "tag": "span",
+                    "attributes": [
+                        {
+                            "name": "aria-hidden",
+                            "value": "true"
+                        }
+                    ]
+                }
+            },
+            {
+                "_id": "9cfd906b-a286-a7e6-ce7d-38d80e45fae7",
+                "text": true,
+                "v": "Slanted Button"
+            },
+            {
+                "_id": "6e67ff19-428a-84ba-ce2c-2a3f2bdbc2de",
+                "type": "Block",
+                "tag": "div",
+                "classes": [
+                    "07d8c45c-3b48-5ba7-ba28-63ebb17426de"
+                ],
+                "children": [],
+                "data": {
+                    "text": false,
+                    "tag": "div",
+                    "devlink": {
+                        "runtimeProps": {},
+                        "slot": ""
+                    },
+                    "displayName": "",
+                    "attr": {
+                        "id": ""
+                    },
+                    "xattr": [],
+                    "search": {
+                        "exclude": false
+                    },
+                    "visibility": {
+                        "conditions": []
+                    }
+                }
+            }
+        ],
+        "styles": [
+            {
+                "_id": "1fc96acd-782a-6850-b73a-7d44f2e633a3",
+                "fake": false,
+                "type": "class",
+                "name": "btn-slanted",
+                "namespace": "",
+                "comb": "",
+                "styleLess": "position: relative; overflow: hidden; padding-top: 0.625em; padding-right: 1em; padding-bottom: 0.625em; padding-left: 1em; border-top-left-radius: 0.125em; border-top-right-radius: 0.125em; border-bottom-left-radius: 0.125em; border-bottom-right-radius: 0.125em; background-color: #146ef5; color: hsla(0, 0.00%, 100.00%, 1.00); text-decoration: none;",
+                "variants": {},
+                "children": [],
+                "createdBy": "6017e732a0ccfe6fd1579c43",
+                "origin": null,
+                "selector": null
+            },
+            {
+                "_id": "e1a6bf42-0c15-0c85-fd37-20d0df4bcadb",
+                "fake": false,
+                "type": "class",
+                "name": "btn-slanted-label__wrap",
+                "namespace": "",
+                "comb": "",
+                "styleLess": "position: relative; z-index: 1; display: @raw<|grid|>; place-items: @raw<|center|>;",
+                "variants": {},
+                "children": [],
+                "createdBy": "6017e732a0ccfe6fd1579c43",
+                "origin": null,
+                "selector": null
+            },
+            {
+                "_id": "ec87ccaf-f16a-06cd-522a-ca314b2ed87d",
+                "fake": false,
+                "type": "class",
+                "name": "btn-slanted-label",
+                "namespace": "",
+                "comb": "",
+                "styleLess": "",
+                "variants": {},
+                "children": [],
+                "createdBy": "6017e732a0ccfe6fd1579c43",
+                "origin": null,
+                "selector": null
+            },
+            {
+                "_id": "07d8c45c-3b48-5ba7-ba28-63ebb17426de",
+                "fake": false,
+                "type": "class",
+                "name": "btn-slanted-bg",
+                "namespace": "",
+                "comb": "",
+                "styleLess": "position: absolute; top: auto; right: 0px; bottom: 0%; z-index: 0; width: 120%; height: 100%; background-color: hsla(216.42857142857142, 100.00%, 23.67%, 1.00); transform: rotate(-30deg) translate(0%, 200%); transform-origin: 50% 0%; border-radius: @raw<|inherit|>;",
+                "variants": {},
+                "children": [],
+                "createdBy": "6017e732a0ccfe6fd1579c43",
+                "origin": null,
+                "selector": null
+            }
+        ],
+        "assets": [],
+        "ix1": [],
+        "ix2": {
+            "interactions": [],
+            "events": [],
+            "actionLists": []
+        }
+    },
+    "meta": {
+        "droppedLinks": 0,
+        "dynBindRemovedCount": 0,
+        "dynListBindRemovedCount": 0,
+        "paginationRemovedCount": 0,
+        "universalBindingsRemovedCount": 0,
+        "unlinkedSymbolCount": 0,
+        "codeComponentsRemovedCount": 0
+    }
+}

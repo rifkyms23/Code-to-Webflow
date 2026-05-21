@@ -1,0 +1,52 @@
+{
+  "type": "@webflow/XscpData",
+  "payload": {
+    "nodes": [
+      {
+        "_id": "0e80bf28-43ea-c2b1-62ff-512ee24f6e2b",
+        "type": "HtmlEmbed",
+        "tag": "div",
+        "classes": [],
+        "children": [],
+        "v": "<script>\n  // Hitung Mundur (Countdown)\nconst countdownDate = new Date(\"Dec 12, 2026 09:00:00\").getTime();\n\nconst updateCountdown = () => {\n    const now = new Date().getTime();\n    const distance = countdownDate - now;\n\n    const days = Math.floor(distance / (1000 * 60 * 60 * 24));\n    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));\n\n    document.getElementById(\"days\").innerText = days.toString().padStart(2, '0');\n    document.getElementById(\"hours\").innerText = hours.toString().padStart(2, '0');\n    document.getElementById(\"minutes\").innerText = minutes.toString().padStart(2, '0');\n\n    if (distance < 0) {\n        clearInterval(timerInterval);\n        document.getElementById(\"days\").innerText = \"00\";\n        document.getElementById(\"hours\").innerText = \"00\";\n        document.getElementById(\"minutes\").innerText = \"00\";\n    }\n};\n\nconst timerInterval = setInterval(updateCountdown, 1000);\nupdateCountdown();\n\n// Form RSVP\nconst rsvpForm = document.getElementById(\"rsvpForm\");\n\nrsvpForm.addEventListener(\"submit\", (e) => {\n    e.preventDefault();\n    alert(\"Terima kasih! Konfirmasi Anda telah kami terima.\");\n    rsvpForm.reset();\n});\n</script>",
+        "data": {
+          "search": { "exclude": true },
+          "embed": {
+            "type": "html",
+            "meta": {
+              "html": "<script>\n  // Hitung Mundur (Countdown)\nconst countdownDate = new Date(\"Dec 12, 2026 09:00:00\").getTime();\n\nconst updateCountdown = () => {\n    const now = new Date().getTime();\n    const distance = countdownDate - now;\n\n    const days = Math.floor(distance / (1000 * 60 * 60 * 24));\n    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));\n    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));\n\n    document.getElementById(\"days\").innerText = days.toString().padStart(2, '0');\n    document.getElementById(\"hours\").innerText = hours.toString().padStart(2, '0');\n    document.getElementById(\"minutes\").innerText = minutes.toString().padStart(2, '0');\n\n    if (distance < 0) {\n        clearInterval(timerInterval);\n        document.getElementById(\"days\").innerText = \"00\";\n        document.getElementById(\"hours\").innerText = \"00\";\n        document.getElementById(\"minutes\").innerText = \"00\";\n    }\n};\n\nconst timerInterval = setInterval(updateCountdown, 1000);\nupdateCountdown();\n\n// Form RSVP\nconst rsvpForm = document.getElementById(\"rsvpForm\");\n\nrsvpForm.addEventListener(\"submit\", (e) => {\n    e.preventDefault();\n    alert(\"Terima kasih! Konfirmasi Anda telah kami terima.\");\n    rsvpForm.reset();\n});\n</script>",
+              "div": false,
+              "iframe": false,
+              "script": true,
+              "compilable": false
+            }
+          },
+          "insideRTE": false,
+          "content": "",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "displayName": "",
+          "attr": { "id": "" },
+          "xattr": [],
+          "visibility": {
+            "conditions": [],
+            "keepInHtml": { "tag": "False", "val": {} }
+          }
+        }
+      }
+    ],
+    "styles": [],
+    "assets": [],
+    "ix1": [],
+    "ix2": { "interactions": [], "events": [], "actionLists": [] }
+  },
+  "meta": {
+    "droppedLinks": 0,
+    "dynBindRemovedCount": 0,
+    "dynListBindRemovedCount": 0,
+    "paginationRemovedCount": 0,
+    "universalBindingsRemovedCount": 0,
+    "unlinkedSymbolCount": 0,
+    "codeComponentsRemovedCount": 0,
+    "richTextComponentsStripped": false
+  }
+}

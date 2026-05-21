@@ -1,0 +1,503 @@
+{
+  "type": "@webflow/XscpData",
+  "payload": {
+    "nodes": [
+      {
+        "_id": "6d045e21-a301-7e00-60b5-cf23fe19d3e9",
+        "type": "Block",
+        "tag": "div",
+        "classes": [
+          "56b85c71-6069-adac-36c2-278c470cdcdc",
+          "3673de8a-50f6-d860-1dd5-8cba5243752c"
+        ],
+        "children": [
+          "3720fed9-a344-e460-bb8b-98935ba5e369",
+          "406f2c13-e6df-4d75-5d7b-6bb0d17c271f",
+          "c6b5dfbf-528b-e5db-b151-2b9781e3e0e9",
+          "14b2b26e-0809-e195-8249-7f7f7b617f6e"
+        ],
+        "data": {
+          "tag": "div",
+          "text": false,
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "displayName": "",
+          "attr": { "id": "" },
+          "xattr": [],
+          "search": { "exclude": false },
+          "visibility": {
+            "conditions": [],
+            "keepInHtml": { "tag": "False", "val": {} }
+          }
+        }
+      },
+      {
+        "_id": "3720fed9-a344-e460-bb8b-98935ba5e369",
+        "type": "Block",
+        "tag": "div",
+        "classes": ["c86e5e35-a778-8077-c471-0325b462ff1e"],
+        "children": ["516a796e-636a-d309-b1db-b828e5c542d6"],
+        "data": {
+          "text": false,
+          "tag": "div",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "displayName": "",
+          "attr": { "id": "" },
+          "xattr": [{ "name": "class", "value": "" }],
+          "search": { "exclude": false },
+          "visibility": {
+            "conditions": [true],
+            "keepInHtml": { "tag": "False", "val": {} }
+          }
+        }
+      },
+      {
+        "_id": "516a796e-636a-d309-b1db-b828e5c542d6",
+        "type": "Image",
+        "tag": "img",
+        "classes": [
+          "e429ef6b-9f89-a01a-dcb7-ea2d63f184f4",
+          "af5989fa-9a6a-fe87-2850-a671fe361b87"
+        ],
+        "children": [],
+        "data": {
+          "img": { "id": "69f1da4ffff39eab9a58ecfc" },
+          "srcsetDisabled": false,
+          "attr": {
+            "width": "auto",
+            "height": "auto",
+            "alt": "__wf_reserved_inherit",
+            "loading": "lazy",
+            "id": ""
+          },
+          "sizes": [],
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "displayName": "",
+          "xattr": [],
+          "search": { "exclude": false },
+          "visibility": {
+            "conditions": [],
+            "keepInHtml": { "tag": "False", "val": {} }
+          }
+        }
+      },
+      {
+        "_id": "406f2c13-e6df-4d75-5d7b-6bb0d17c271f",
+        "type": "Heading",
+        "tag": "h1",
+        "classes": [
+          "c0361d16-633e-7415-753a-fa5b76e33611",
+          "6803b8fe-7d44-e925-428c-db8bfb91425d",
+          "d0a777e9-169b-67de-d81c-7bb9dd05d50a"
+        ],
+        "children": [
+          "cac201c6-a2ea-8efd-d65d-5a467aca076e",
+          "1d4e8423-06f4-baa1-f09b-a98e82e394fc",
+          "fc45a78b-9733-cf7b-0d7b-e762d8a094d1",
+          "74dfbfb9-5380-1469-6e5a-43cfa65019a2"
+        ],
+        "data": {
+          "tag": "h1",
+          "xattr": [{ "name": "data-text-animation", "value": "heading" }],
+          "style": { "base": { "medium": { "noPseudo": {} } } },
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "displayName": "",
+          "attr": { "id": "" },
+          "search": { "exclude": false },
+          "visibility": {
+            "conditions": [],
+            "keepInHtml": { "tag": "False", "val": {} }
+          }
+        }
+      },
+      {
+        "_id": "cac201c6-a2ea-8efd-d65d-5a467aca076e",
+        "text": true,
+        "v": "Von der Idee "
+      },
+      {
+        "_id": "1d4e8423-06f4-baa1-f09b-a98e82e394fc",
+        "type": "Span",
+        "tag": "span",
+        "classes": ["0eb9d0fc-e892-383e-e603-392980bf58fb"],
+        "children": ["0c7129ee-ac10-b73d-965d-8a387548b6d4"],
+        "data": {
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "displayName": "",
+          "attr": { "id": "" },
+          "xattr": [],
+          "search": { "exclude": false },
+          "visibility": {
+            "conditions": [],
+            "keepInHtml": { "tag": "False", "val": {} }
+          }
+        }
+      },
+      {
+        "_id": "0c7129ee-ac10-b73d-965d-8a387548b6d4",
+        "text": true,
+        "v": "zur"
+      },
+      { "_id": "fc45a78b-9733-cf7b-0d7b-e762d8a094d1", "text": true, "v": " " },
+      {
+        "_id": "74dfbfb9-5380-1469-6e5a-43cfa65019a2",
+        "type": "Span",
+        "tag": "span",
+        "classes": ["62d1c00d-3175-657e-0816-a3387d1baf28"],
+        "children": ["85b38b18-e4f9-0e4d-a6f7-39d9ecb95991"],
+        "data": {
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "displayName": "",
+          "attr": { "id": "" },
+          "xattr": [],
+          "search": { "exclude": false },
+          "visibility": {
+            "conditions": [],
+            "keepInHtml": { "tag": "False", "val": {} }
+          }
+        }
+      },
+      {
+        "_id": "85b38b18-e4f9-0e4d-a6f7-39d9ecb95991",
+        "text": true,
+        "v": "einbaufertigen Elektronik"
+      },
+      {
+        "_id": "c6b5dfbf-528b-e5db-b151-2b9781e3e0e9",
+        "type": "Paragraph",
+        "tag": "p",
+        "classes": [
+          "2a813dae-1190-4b92-9021-88e536ae4c0f",
+          "888d2df9-af2e-23f7-d799-650d432a738f",
+          "99038179-6169-4d26-010c-f57cf7f823aa"
+        ],
+        "children": ["3becac1c-9299-966b-5cfa-490cc21834b0"],
+        "data": {
+          "xattr": [{ "name": "data-text-animation", "value": "desc" }],
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "displayName": "",
+          "attr": { "id": "" },
+          "search": { "exclude": false },
+          "visibility": {
+            "conditions": [],
+            "keepInHtml": { "tag": "False", "val": {} }
+          }
+        }
+      },
+      {
+        "_id": "3becac1c-9299-966b-5cfa-490cc21834b0",
+        "text": true,
+        "v": "Wir entwickeln komplette elektronische Systeme – maßgeschneiderte PCBs, Firmware und integrierte Hardwaremodule"
+      },
+      {
+        "_id": "14b2b26e-0809-e195-8249-7f7f7b617f6e",
+        "type": "Block",
+        "tag": "div",
+        "classes": [
+          "c86e5e35-a778-8077-c471-0325b462ff1e",
+          "214bfd70-86b0-e1e8-d6cb-6a140ff5a9c1"
+        ],
+        "children": ["77108976-0178-15d5-c0da-40df7e6767cf"],
+        "data": {
+          "text": false,
+          "tag": "div",
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "displayName": "",
+          "attr": { "id": "" },
+          "xattr": [{ "name": "class", "value": "" }],
+          "search": { "exclude": false },
+          "visibility": {
+            "conditions": [],
+            "keepInHtml": { "tag": "False", "val": {} }
+          }
+        }
+      },
+      {
+        "_id": "77108976-0178-15d5-c0da-40df7e6767cf",
+        "type": "Image",
+        "tag": "img",
+        "classes": [
+          "e429ef6b-9f89-a01a-dcb7-ea2d63f184f4",
+          "af5989fa-9a6a-fe87-2850-a671fe361b87",
+          "214bfd70-86b0-e1e8-d6cb-6a140ff5a9c2"
+        ],
+        "children": [],
+        "data": {
+          "img": { "id": "69f1da4ffff39eab9a58ecfc" },
+          "srcsetDisabled": false,
+          "attr": {
+            "width": "auto",
+            "height": "auto",
+            "alt": "__wf_reserved_inherit",
+            "loading": "lazy",
+            "id": ""
+          },
+          "sizes": [],
+          "devlink": { "runtimeProps": {}, "slot": "" },
+          "displayName": "",
+          "xattr": [],
+          "search": { "exclude": false },
+          "visibility": {
+            "conditions": [],
+            "keepInHtml": { "tag": "False", "val": {} }
+          }
+        }
+      }
+    ],
+    "styles": [
+      {
+        "_id": "2a813dae-1190-4b92-9021-88e536ae4c0f",
+        "fake": false,
+        "type": "class",
+        "name": "hero_desc",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "max-width: 30ch; padding-right: clamp(2 * 1rem, ((2 - ((2.5 - 2) / (90 - 30) * 30)) * 1rem + ((2.5 - 2) / (90 - 30)) * 100vw), 2.5 * 1rem); padding-left: clamp(2 * 1rem, ((2 - ((2.5 - 2) / (90 - 30) * 30)) * 1rem + ((2.5 - 2) / (90 - 30)) * 100vw), 2.5 * 1rem);",
+        "variants": {},
+        "children": ["888d2df9-af2e-23f7-d799-650d432a738f"],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "3673de8a-50f6-d860-1dd5-8cba5243752c",
+        "fake": false,
+        "type": "class",
+        "name": "u-grid-above",
+        "namespace": "",
+        "comb": "&",
+        "styleLess": "grid-column-gap: 0px; ---mode--collection-46b021ca-89a5-f6bd-951d-9cd6e4738eb2: mode-4c06758f-f872-a241-ed80-ec141bf9433f; grid-row-gap: @raw<|clamp(2 * 1rem, ((2 - ((13.75 - 2) / (90 - 30) * 30)) * 1rem + ((13.75 - 2) / (90 - 30)) * 100vw), 13.75 * 1rem)|>;",
+        "variants": {},
+        "children": [],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "0eb9d0fc-e892-383e-e603-392980bf58fb",
+        "fake": false,
+        "type": "class",
+        "name": "text-break-desktop",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "",
+        "variants": {},
+        "children": [],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "af5989fa-9a6a-fe87-2850-a671fe361b87",
+        "fake": false,
+        "type": "class",
+        "name": "u-cover-absolute",
+        "namespace": "",
+        "comb": "&",
+        "styleLess": "",
+        "variants": {},
+        "children": ["214bfd70-86b0-e1e8-d6cb-6a140ff5a9c2"],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "214bfd70-86b0-e1e8-d6cb-6a140ff5a9c1",
+        "fake": false,
+        "type": "class",
+        "name": "Right",
+        "namespace": "",
+        "comb": "&",
+        "styleLess": "grid-column-start: @raw<|4|>;",
+        "variants": {},
+        "children": [],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "c86e5e35-a778-8077-c471-0325b462ff1e",
+        "fake": false,
+        "type": "class",
+        "name": "decoration",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "position: relative; height: 100%; border-top-style: solid; border-top-width: 1px; border-top-color: #262626; border-right-style: solid; border-right-width: 1px; border-right-color: #262626; border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #262626; border-left-style: solid; border-left-width: 1px; border-left-color: #262626;",
+        "variants": {},
+        "children": ["214bfd70-86b0-e1e8-d6cb-6a140ff5a9c1"],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "214bfd70-86b0-e1e8-d6cb-6a140ff5a9c2",
+        "fake": false,
+        "type": "class",
+        "name": "Right 2",
+        "namespace": "",
+        "comb": "&",
+        "styleLess": "",
+        "variants": {},
+        "children": [],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "e429ef6b-9f89-a01a-dcb7-ea2d63f184f4",
+        "fake": false,
+        "type": "class",
+        "name": "decoration_image",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "",
+        "variants": {},
+        "children": ["af5989fa-9a6a-fe87-2850-a671fe361b87"],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "c0361d16-633e-7415-753a-fa5b76e33611",
+        "fake": false,
+        "type": "class",
+        "name": "hero_heading",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "position: relative; z-index: 10; max-width: 14ch; padding-right: clamp(2 * 1rem, ((2 - ((2.5 - 2) / (90 - 30) * 30)) * 1rem + ((2.5 - 2) / (90 - 30)) * 100vw), 2.5 * 1rem); padding-left: clamp(2 * 1rem, ((2 - ((2.5 - 2) / (90 - 30) * 30)) * 1rem + ((2.5 - 2) / (90 - 30)) * 100vw), 2.5 * 1rem);",
+        "variants": {},
+        "children": ["6803b8fe-7d44-e925-428c-db8bfb91425d"],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "62d1c00d-3175-657e-0816-a3387d1baf28",
+        "fake": false,
+        "type": "class",
+        "name": "u-color-brand",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "color: #289cee;",
+        "variants": {},
+        "children": [],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "888d2df9-af2e-23f7-d799-650d432a738f",
+        "fake": false,
+        "type": "class",
+        "name": "u-text-style-main",
+        "namespace": "",
+        "comb": "&",
+        "styleLess": "",
+        "variants": {},
+        "children": ["99038179-6169-4d26-010c-f57cf7f823aa"],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "d0a777e9-169b-67de-d81c-7bb9dd05d50a",
+        "fake": false,
+        "type": "class",
+        "name": "u-column-3",
+        "namespace": "",
+        "comb": "&",
+        "styleLess": "",
+        "variants": {
+          "medium": {
+            "styleLess": "max-width: none; padding-right: clamp(1.25 * 1rem, ((1.25 - ((1.5 - 1.25) / (90 - 30) * 30)) * 1rem + ((1.5 - 1.25) / (90 - 30)) * 100vw), 1.5 * 1rem); padding-left: clamp(1.25 * 1rem, ((1.25 - ((1.5 - 1.25) / (90 - 30) * 30)) * 1rem + ((1.5 - 1.25) / (90 - 30)) * 100vw), 1.5 * 1rem);"
+          }
+        },
+        "children": [],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "6803b8fe-7d44-e925-428c-db8bfb91425d",
+        "fake": false,
+        "type": "class",
+        "name": "u-text-style-display",
+        "namespace": "",
+        "comb": "&",
+        "styleLess": "",
+        "variants": {},
+        "children": ["d0a777e9-169b-67de-d81c-7bb9dd05d50a"],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "99038179-6169-4d26-010c-f57cf7f823aa",
+        "fake": false,
+        "type": "class",
+        "name": "u-color-faded",
+        "namespace": "",
+        "comb": "&",
+        "styleLess": "position: relative; z-index: 10;",
+        "variants": {
+          "medium": {
+            "styleLess": "max-width: none; padding-right: clamp(1.25 * 1rem, ((1.25 - ((1.5 - 1.25) / (90 - 30) * 30)) * 1rem + ((1.5 - 1.25) / (90 - 30)) * 100vw), 1.5 * 1rem); padding-left: clamp(1.25 * 1rem, ((1.25 - ((1.5 - 1.25) / (90 - 30) * 30)) * 1rem + ((1.5 - 1.25) / (90 - 30)) * 100vw), 1.5 * 1rem);"
+          }
+        },
+        "children": [],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      },
+      {
+        "_id": "56b85c71-6069-adac-36c2-278c470cdcdc",
+        "fake": false,
+        "type": "class",
+        "name": "hero_top",
+        "namespace": "",
+        "comb": "",
+        "styleLess": "position: relative; z-index: 3; width: 100%;",
+        "variants": {},
+        "children": ["3673de8a-50f6-d860-1dd5-8cba5243752c"],
+        "createdBy": "68b561ef94b819313f85e350",
+        "origin": null,
+        "selector": null
+      }
+    ],
+    "assets": [
+      {
+        "cdnUrl": "https://cdn.prod.website-files.com/69f1da4ffff39eab9a58ecb7/69f1da4ffff39eab9a58ecfc_decoration_home.svg",
+        "siteId": "69f1da4ffff39eab9a58ecb7",
+        "width": 335,
+        "isHD": false,
+        "height": 204,
+        "fileName": "69f1da4ffff39eab9a58ecfc_decoration_home.svg",
+        "createdOn": "2026-01-12T03:01:27.087Z",
+        "origFileName": "decoration_home.svg",
+        "alt": "",
+        "fileHash": "aff21bf04cc2ba92f4129503d9a8faff",
+        "translationLoading": false,
+        "variants": [],
+        "mimeType": "image/svg+xml",
+        "isFromWellKnownFolder": false,
+        "s3Url": "https://s3.amazonaws.com/webflow-prod-assets/69f1da4ffff39eab9a58ecb7/69f1da4ffff39eab9a58ecfc_decoration_home.svg",
+        "thumbUrl": "https://cdn.prod.website-files.com/69f1da4ffff39eab9a58ecb7/69f1da4ffff39eab9a58ecfc_decoration_home.svg",
+        "_id": "69f1da4ffff39eab9a58ecfc",
+        "updatedOn": "2026-04-29T10:15:44.140Z",
+        "fileSize": 2354,
+        "localizedSettings": {}
+      }
+    ],
+    "ix1": [],
+    "ix2": { "interactions": [], "events": [], "actionLists": [] }
+  },
+  "meta": {
+    "droppedLinks": 0,
+    "dynBindRemovedCount": 0,
+    "dynListBindRemovedCount": 0,
+    "paginationRemovedCount": 0,
+    "universalBindingsRemovedCount": 0,
+    "unlinkedSymbolCount": 2,
+    "codeComponentsRemovedCount": 0,
+    "richTextComponentsStripped": false
+  }
+}
